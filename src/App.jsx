@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Music2 } from 'lucide-react';
+import './App.css';
 
 function HeroIllustration() {
   return (
@@ -81,7 +83,7 @@ export default function App() {
               <Music2 size={25} strokeWidth={2.4} />
             </div>
 
-            <div className="plan-details" id="plan-details">
+            <div className="plan-text" id="plan-details">
               <h3>Annual Plan</h3>
               <p>$59.99/year</p>
             </div>
@@ -103,11 +105,7 @@ export default function App() {
 
       <footer className="attribution">
         Challenge by{' '}
-        <a
-          href="https://crio.do/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://crio.do/" target="_blank" rel="noreferrer">
           Crio.do
         </a>
         . Coded by <a href="#">Apoorva</a>.
