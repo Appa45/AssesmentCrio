@@ -27,8 +27,18 @@ body {
 @media (max-width: 450px) {
   body {
     background-image: url("/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
   }
 }
+
+.change-link a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 button, a { -webkit-tap-highlight-color: transparent; }
 .main { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 20px 26px; }
 .container { width: min(100%, 450px); overflow: hidden; border-radius: 20px; background: #fff; box-shadow: 0 22px 55px rgba(31,47,86,.13); text-align: center; }

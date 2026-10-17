@@ -61,9 +61,9 @@ export default function App() {
     <p>$59.99/year</p>
   </div>
 
-  <a href="#" className="change-link">
-    Change
-  </a>
+<div className="change-link">
+  <a href="#plan-details">Change</a>
+</div>
 </div>
           </section>
           <button className="proceed-btn" type="button">Proceed to Payment</button>
