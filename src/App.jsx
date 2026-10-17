@@ -63,6 +63,22 @@ function HeroIllustration() {
 }
 
 export default function App() {
+  const handleProceedMouseEnter = (event) => {
+    event.currentTarget.style.backgroundColor = '#766cf1';
+  };
+
+  const handleProceedMouseLeave = (event) => {
+    event.currentTarget.style.backgroundColor = '#3829e0';
+  };
+
+  const handleCancelMouseEnter = (event) => {
+    event.currentTarget.style.color = '#1f2f56';
+  };
+
+  const handleCancelMouseLeave = (event) => {
+    event.currentTarget.style.color = '#7280a7';
+  };
+
   return (
     <main className="main">
       <article className="container" aria-labelledby="order-heading">
@@ -78,25 +94,36 @@ export default function App() {
             on any device anywhere you like!
           </p>
 
-        <section className="plan-row" aria-label="Selected plan">
-  <div className="music-icon" aria-hidden="true">
-    <Music2 size={25} strokeWidth={2.4} />
-  </div>
+          <section className="plan-row" aria-label="Selected plan">
+            <div className="music-icon" aria-hidden="true">
+              <Music2 size={25} strokeWidth={2.4} />
+            </div>
 
-  <div className="plan-text" id="plan-details">
-    <h3>Annual Plan</h3>
-    <p>$59.99/year</p>
-  </div>
-<div className="change-link">
-  <a href="#">Change</a>
-</div>
-</section>
+            <div className="plan-text" id="plan-details">
+              <h3>Annual Plan</h3>
+              <p>$59.99/year</p>
+            </div>
 
-          <button className="proceed-btn" type="button">
+            <div className="change-link">
+              <a href="#">Change</a>
+            </div>
+          </section>
+
+          <button
+            className="proceed-btn"
+            type="button"
+            onMouseEnter={handleProceedMouseEnter}
+            onMouseLeave={handleProceedMouseLeave}
+          >
             Proceed to Payment
           </button>
 
-          <a className="cancel-order" href="#">
+          <a
+            className="cancel-order"
+            href="#"
+            onMouseEnter={handleCancelMouseEnter}
+            onMouseLeave={handleCancelMouseLeave}
+          >
             Cancel Order
           </a>
         </div>
