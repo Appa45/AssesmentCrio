@@ -109,8 +109,24 @@ export default function App() {
             </div>
           </section>
 
-
-<button className="proceed-btn" type="button">
+         <button
+  className="proceed-btn"
+  type="button"
+  onMouseOver={(event) => {
+    event.currentTarget.style.setProperty(
+      'background-color',
+      'rgb(118, 108, 241)',
+      'important'
+    );
+  }}
+  onMouseOut={(event) => {
+    event.currentTarget.style.setProperty(
+      'background-color',
+      'rgb(56, 41, 224)',
+      'important'
+    );
+  }}
+>
   Proceed to Payment
 </button>
 
