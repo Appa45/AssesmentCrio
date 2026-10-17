@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Music2 } from 'lucide-react';
-import './App.css';
+import './styles.css';
 
 function HeroIllustration() {
   return (
