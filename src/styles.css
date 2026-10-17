@@ -127,6 +127,7 @@ body {
 }
 
 
+
 .proceed-btn {
   display: block;
   width: 100%;
@@ -138,13 +139,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(56, 41, 224, 0.2);
   transition: background-color 0.2s ease;
 }
 
 .proceed-btn:hover {
   background-color: #766cf1;
 }
+
 
 
 .cancel-order {

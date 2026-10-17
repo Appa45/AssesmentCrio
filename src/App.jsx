@@ -87,10 +87,9 @@ export default function App() {
     <h3>Annual Plan</h3>
     <p>$59.99/year</p>
   </div>
-
-  <div className="change-link">
-    <a href="#plan-details">Change</a>
-  </div>
+<div className="change-link">
+  <a href="#">Change</a>
+</div>
 </section>
 
           <button className="proceed-btn" type="button">
