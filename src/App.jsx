@@ -55,11 +55,16 @@ export default function App() {
           </p>
           <section className="plan-row" aria-label="Selected plan">
             <div className="music-icon" aria-hidden="true"><Music2 size={25} strokeWidth={2.4} /></div>
-            <div className="plan-text">
-              <strong>Annual Plan</strong>
-              <span>$59.99/year</span>
-            </div>
-            <div className="change-link"><a href="#">Change</a></div>
+          <div className="plan-details">
+  <div className="plan-text">
+    <h3>Annual Plan</h3>
+    <p>$59.99/year</p>
+  </div>
+
+  <a href="#" className="change-link">
+    Change
+  </a>
+</div>
           </section>
           <button className="proceed-btn" type="button">Proceed to Payment</button>
           <a className="cancel-order" href="#">Cancel Order</a>
