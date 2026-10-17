@@ -145,10 +145,7 @@ body {
   transition: none;
 }
 
-.proceed-btn:hover,
-.proceed-btn:focus-visible {
-  background-color: #766cf1;
-}
+
 
 /* Cancel Order link */
 .cancel-order {
@@ -215,15 +212,7 @@ body {
 
 
 
-/* Proceed to Payment hover */
-button.proceed-btn {
-  background-color: #3829e0;
-  color: #ffffff;
-}
 
-button.proceed-btn:hover {
-  background-color: #766cf1 !important;
-}
 
 /* Cancel Order hover */
 a.cancel-order {
@@ -235,11 +224,15 @@ a.cancel-order:hover {
 }
 
 
+
 button.proceed-btn {
-  background-color: rgb(56, 41, 224);
-  transition: none;
+  background: rgb(56, 41, 224) !important;
+  color: #ffffff;
+  cursor: pointer;
+  transition: none !important;
 }
 
 button.proceed-btn:hover {
+  background: rgb(118, 108, 241) !important;
   background-color: rgb(118, 108, 241) !important;
 }
