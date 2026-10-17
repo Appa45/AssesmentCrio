@@ -212,3 +212,24 @@ body {
     padding: 14px;
   }
 }
+
+
+
+/* Proceed to Payment hover */
+button.proceed-btn {
+  background-color: #3829e0;
+  color: #ffffff;
+}
+
+button.proceed-btn:hover {
+  background-color: #766cf1 !important;
+}
+
+/* Cancel Order hover */
+a.cancel-order {
+  color: #7280a7;
+}
+
+a.cancel-order:hover {
+  color: #1f2f56 !important;
+}
