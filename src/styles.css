@@ -128,6 +128,8 @@ body {
 
 
 
+
+/* Proceed to Payment button */
 .proceed-btn {
   display: block;
   width: 100%;
@@ -139,15 +141,16 @@ body {
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 10px 20px rgba(56, 41, 224, 0.2);
+  transition: none;
 }
 
-.proceed-btn:hover {
+.proceed-btn:hover,
+.proceed-btn:focus-visible {
   background-color: #766cf1;
 }
 
-
-
+/* Cancel Order link */
 .cancel-order {
   display: inline-block;
   margin-top: 26px;
@@ -155,12 +158,14 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: none;
 }
 
-.cancel-order:hover {
+.cancel-order:hover,
+.cancel-order:focus-visible {
   color: #1f2f56;
 }
+
 
 .attribution {
   margin-top: 24px;
