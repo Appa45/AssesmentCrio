@@ -78,20 +78,20 @@ export default function App() {
             on any device anywhere you like!
           </p>
 
-          <section className="plan-row" aria-label="Selected plan">
-            <div className="music-icon" aria-hidden="true">
-              <Music2 size={25} strokeWidth={2.4} />
-            </div>
+        <section className="plan-row" aria-label="Selected plan">
+  <div className="music-icon" aria-hidden="true">
+    <Music2 size={25} strokeWidth={2.4} />
+  </div>
 
-            <div className="plan-text" id="plan-details">
-              <h3>Annual Plan</h3>
-              <p>$59.99/year</p>
-            </div>
+  <div className="plan-text" id="plan-details">
+    <h3>Annual Plan</h3>
+    <p>$59.99/year</p>
+  </div>
 
-            <div className="change-link">
-              <a href="#plan-details">Change</a>
-            </div>
-          </section>
+  <div className="change-link">
+    <a href="#plan-details">Change</a>
+  </div>
+</section>
 
           <button className="proceed-btn" type="button">
             Proceed to Payment
