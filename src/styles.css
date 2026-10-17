@@ -233,3 +233,13 @@ a.cancel-order {
 a.cancel-order:hover {
   color: #1f2f56 !important;
 }
+
+
+button.proceed-btn {
+  background-color: rgb(56, 41, 224);
+  transition: none;
+}
+
+button.proceed-btn:hover {
+  background-color: rgb(118, 108, 241) !important;
+}
