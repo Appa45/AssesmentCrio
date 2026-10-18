@@ -1,7 +1,39 @@
-
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Music2 } from 'lucide-react';
 import './styles.css';
+
+/*
+ * Applies a hover colour with native listeners so it reacts to every kind of
+ * hover event (real mouse, mouseover, mouseenter, pointer events) and updates
+ * the element's inline style immediately (no waiting for CSS :hover).
+ */
+const ENTER_EVENTS = [
+  'mouseenter',
+  'mouseover',
+  'mousemove',
+  'pointerenter',
+  'pointerover',
+  'pointermove',
+];
+const LEAVE_EVENTS = ['mouseleave', 'mouseout', 'pointerleave', 'pointerout'];
+
+function useHoverStyle(ref, property, normalValue, hoverValue) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+
+    const onEnter = () => el.style.setProperty(property, hoverValue, 'important');
+    const onLeave = () => el.style.setProperty(property, normalValue, 'important');
+
+    ENTER_EVENTS.forEach((name) => el.addEventListener(name, onEnter));
+    LEAVE_EVENTS.forEach((name) => el.addEventListener(name, onLeave));
+
+    return () => {
+      ENTER_EVENTS.forEach((name) => el.removeEventListener(name, onEnter));
+      LEAVE_EVENTS.forEach((name) => el.removeEventListener(name, onLeave));
+    };
+  }, [ref, property, normalValue, hoverValue]);
+}
 
 function HeroIllustration() {
   return (
@@ -63,21 +95,24 @@ function HeroIllustration() {
 }
 
 export default function App() {
-  const handleProceedMouseEnter = (event) => {
-    event.currentTarget.style.backgroundColor = '#766cf1';
-  };
+  const proceedRef = useRef(null);
+  const cancelRef = useRef(null);
 
-  const handleProceedMouseLeave = (event) => {
-    event.currentTarget.style.backgroundColor = '#3829e0';
-  };
+  // Proceed to Payment: #3829e0 -> lighter purple on hover
+  useHoverStyle(
+    proceedRef,
+    'background-color',
+    'rgb(56, 41, 224)',
+    'rgb(118, 108, 241)'
+  );
 
-  const handleCancelMouseEnter = (event) => {
-    event.currentTarget.style.color = '#1f2f56';
-  };
-
-  const handleCancelMouseLeave = (event) => {
-    event.currentTarget.style.color = '#7280a7';
-  };
+  // Cancel Order: #7280a7 -> dark blue on hover
+  useHoverStyle(
+    cancelRef,
+    'color',
+    'rgb(114, 128, 167)',
+    'rgb(31, 47, 86)'
+  );
 
   return (
     <main className="main">
@@ -109,33 +144,11 @@ export default function App() {
             </div>
           </section>
 
-         <button
-  className="proceed-btn"
-  type="button"
-  onMouseOver={(event) => {
-    event.currentTarget.style.setProperty(
-      'background-color',
-      'rgb(118, 108, 241)',
-      'important'
-    );
-  }}
-  onMouseOut={(event) => {
-    event.currentTarget.style.setProperty(
-      'background-color',
-      'rgb(56, 41, 224)',
-      'important'
-    );
-  }}
->
-  Proceed to Payment
-</button>
+          <button ref={proceedRef} className="proceed-btn" type="button">
+            Proceed to Payment
+          </button>
 
-          <a
-            className="cancel-order"
-            href="#"
-            onMouseEnter={handleCancelMouseEnter}
-            onMouseLeave={handleCancelMouseLeave}
-          >
+          <a ref={cancelRef} className="cancel-order" href="#">
             Cancel Order
           </a>
         </div>
