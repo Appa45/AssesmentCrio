@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -142,10 +141,12 @@ body {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(56, 41, 224, 0.2);
-  transition: none;
 }
 
-
+.proceed-btn:hover,
+.proceed-btn:focus-visible {
+  background-color: #766cf1;
+}
 
 /* Cancel Order link */
 .cancel-order {
@@ -155,14 +156,12 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  transition: none;
 }
 
 .cancel-order:hover,
 .cancel-order:focus-visible {
   color: #1f2f56;
 }
-
 
 .attribution {
   margin-top: 24px;
@@ -208,31 +207,4 @@ body {
     gap: 12px;
     padding: 14px;
   }
-}
-
-
-
-
-
-/* Cancel Order hover */
-a.cancel-order {
-  color: #7280a7;
-}
-
-a.cancel-order:hover {
-  color: #1f2f56 !important;
-}
-
-
-
-button.proceed-btn {
-  background: rgb(56, 41, 224) !important;
-  color: #ffffff;
-  cursor: pointer;
-  transition: none !important;
-}
-
-button.proceed-btn:hover {
-  background: rgb(118, 108, 241) !important;
-  background-color: rgb(118, 108, 241) !important;
 }
